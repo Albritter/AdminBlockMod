@@ -1,8 +1,9 @@
 #Block
-tile.adminGlassNormal.name=Admin Glass
+tile.adminGlass.name=Admin Glass
 
 #Item
-item.adminblockmod:adminSword.name=Admin Sword
+item.adminblockmod:admin_sword.name=Admin Sword
+item.adminblockmod:adminTool.name=Admin Sword
 
 #Miscellaneous
 itemGroup.adminblockmod=Admin Block Mod

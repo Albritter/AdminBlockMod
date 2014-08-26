@@ -18,7 +18,7 @@ public class ConfigurationHandler
 	private static void loadConfiguration()
 	{
 		enableCrafting = configuration.getBoolean("enableCrafting", Configuration.CATEGORY_GENERAL, false, "");
-		setUnbreakable = configuration.getBoolean("setUnbreakable",	Configuration.CATEGORY_GENERAL, true, "d");
+		setUnbreakable = configuration.getBoolean("setUnbreakable",	Configuration.CATEGORY_GENERAL, true, "");
 		if (configuration.hasChanged())
 		{
 			configuration.save();

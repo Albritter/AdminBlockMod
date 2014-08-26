@@ -6,16 +6,13 @@ import net.minecraft.block.material.Material;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class AdminGlassNormal extends BlockCommon
+public class AdminGlass extends BlockCommon
 {
-	public AdminGlassNormal()
+	public AdminGlass()
 	{
 		super(Material.glass);		
-		setBlockName("adminGlassNormal");
-		setHarvestLevel("FIST", 9001);
-		
-		
-	}
+		setBlockName("adminGlass");
+		setHarvestLevel("FIST", 9001);}
 
 	public int quantityDropped(Random p)
 	{
@@ -35,7 +32,7 @@ public class AdminGlassNormal extends BlockCommon
 	@SideOnly(Side.CLIENT)
 	public int getRenderBlockPass()
 	{
-		return 1; // 0 Fuer Solid und 1 fr Alpha
+		return 1; // 0 Fuer Solid und 1 fuer Alpha
 	}
 	public void destroyBlock(){
 		this.blockHardness=0;

@@ -10,7 +10,7 @@ public class ModBlock
 
 	public static void loadBlocks()
 	{
-		adminGlass = new AdminGlassNormal();
+		adminGlass = new AdminGlass();
 
 		GameRegistry.registerBlock(adminGlass,"adminGlass");
 	}

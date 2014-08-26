@@ -2,21 +2,34 @@ package de.Albritter.AdminBlockMod.Items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
 import de.Albritter.AdminBlockMod.CreativeTabs.CreativeTab;
 import de.Albritter.AdminBlockMod.help.reference.Material;
 import de.Albritter.AdminBlockMod.help.reference.Reference;
 import de.Albritter.AdminBlockMod.help.utility.LogHelper;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 
-public class AdmiumSword extends ItemSword {
+public class AdmiumSchacke extends ItemTool {
 
-    public AdmiumSword() {
-	super(Material.Tools.ADMIUM);
-	this.setUnlocalizedName("admin_sword");
+    public AdmiumSchacke() {
+	super(0, Material.Tools.ADMIUM, null);
+	this.setUnlocalizedName("admin_tool");
 	this.setCreativeTab(CreativeTab.myTab);
+    }
+
+    @Override
+    public boolean canHarvestBlock(Block par1Block, ItemStack itemStack) {
+	return true;
+    }
+
+    @Override
+    public float func_150893_a(ItemStack p_150893_1_, Block p_150893_2_) {
+	// TODO Auto-generated method stub
+
+	LogHelper.debug(p_150893_2_);
+	return Float.MAX_VALUE;
     }
 
     @Override
@@ -38,13 +51,5 @@ public class AdmiumSword extends ItemSword {
 
     protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
 	return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
-    }
-
-    public boolean hitEntity(ItemStack p_77644_1_, EntityLivingBase p_77644_2_, EntityLivingBase p_77644_3_) {
-	p_77644_2_.setHealth(p_77644_2_.getMaxHealth());
-	LogHelper.info(p_77644_3_ + " = p_77644_3_ \n" + p_77644_2_ + " = p_77644_2_");
-	p_77644_2_.setHealth(0);
-	p_77644_1_.damageItem(1, p_77644_3_);
-	return true;
     }
 }
