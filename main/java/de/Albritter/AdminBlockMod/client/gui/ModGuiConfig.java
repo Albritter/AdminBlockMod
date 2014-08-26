@@ -8,12 +8,7 @@ import de.Albritter.AdminBlockMod.configuration.ConfigurationHandler;
 import de.Albritter.AdminBlockMod.help.reference.Reference;
 
 public class ModGuiConfig extends GuiConfig {
-	public ModGuiConfig(GuiScreen guiScreen) {
-		super(guiScreen, new ConfigElement<Object>(
-				ConfigurationHandler.configuration
-						.getCategory(Configuration.CATEGORY_GENERAL))
-				.getChildElements(), Reference.MOD_ID, false, false, GuiConfig
-				.getAbridgedConfigPath(ConfigurationHandler.configuration
-						.toString()));
-	}
+    public ModGuiConfig(GuiScreen guiScreen) {
+	super(guiScreen, new ConfigElement<Object>(ConfigurationHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(), Reference.MOD_ID, false, false, GuiConfig.getAbridgedConfigPath(ConfigurationHandler.configuration.toString()));
+    }
 }
