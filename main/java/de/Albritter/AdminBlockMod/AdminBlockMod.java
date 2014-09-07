@@ -13,7 +13,6 @@ import de.Albritter.AdminBlockMod.configuration.ConfigurationHandler;
 import de.Albritter.AdminBlockMod.help.reference.Reference;
 import de.Albritter.AdminBlockMod.help.utility.LogHelper;
 import de.Albritter.AdminBlockMod.proxy.IProxy;
-import de.Albritter.AdminBlockMod.recipes.ModRecipes;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class AdminBlockMod
@@ -37,7 +36,8 @@ public class AdminBlockMod
 	@EventHandler
 	private void init(FMLInitializationEvent initEvent)
 	{
-		LogHelper.info("Init");
-		ModRecipes.loadRecipes();
+		//LogHelper.info("Init");
+		//ModRecipes.loadRecipes();
+	    
 	}
 }

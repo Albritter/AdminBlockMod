@@ -41,9 +41,10 @@ public class AdmiumSword extends ItemSword {
     }
 
     public boolean hitEntity(ItemStack p_77644_1_, EntityLivingBase p_77644_2_, EntityLivingBase p_77644_3_) {
-	p_77644_2_.setHealth(p_77644_2_.getMaxHealth());
-	LogHelper.info(p_77644_3_ + " = p_77644_3_ \n" + p_77644_2_ + " = p_77644_2_");
+	// LogHelper.info(p_77644_3_ + " = p_77644_3_ \n" + p_77644_2_ +
+	// " = p_77644_2_");
 	p_77644_2_.setHealth(0);
+	p_77644_2_.setDead();
 	p_77644_1_.damageItem(1, p_77644_3_);
 	return true;
     }

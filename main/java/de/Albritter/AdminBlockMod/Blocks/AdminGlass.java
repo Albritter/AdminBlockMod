@@ -5,18 +5,22 @@ import java.util.Random;
 import net.minecraft.block.material.Material;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import de.Albritter.AdminBlockMod.help.utility.LogHelper;
 
-public class AdminGlass extends BlockCommon
+public class AdminGlass extends CustomBlock
 {
 	public AdminGlass()
 	{
 		super(Material.glass);		
 		setBlockName("adminGlass");
-		setHarvestLevel("FIST", 9001);}
+		setHarvestLevel("FIST", 9001);
+		LogHelper.info(this.getUnlocalizedName() + "!!!!!!!!!!!!!!!!!!!!!");
+	}
 
 	public int quantityDropped(Random p)
 	{
-		return 0;
+	    LogHelper.info("call \"public int quantityDropped(Random p)\"");	
+	    return 0;
 	}
 
 	public boolean renderAsNormalBlock()
@@ -36,5 +40,6 @@ public class AdminGlass extends BlockCommon
 	}
 	public void destroyBlock(){
 		this.blockHardness=0;
+	LogHelper.info("call \"public void destroyBlock() \"");	
 	}
 }
